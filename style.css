@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Computerfont';
+    src: url('assets/fonts/Computerfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    font-family: 'Computerfont', sans-serif;
+    flex-direction: column;
+    text-align: center;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    /* height: 90vh; */
+    background: url('assets/images/3x_backround_image.png') no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover; /* Ensures the whole image is visible */
+    background-position: center;
+    background-color: #FFE96E;
+    position: relative;
+}
+
+.sign-up {
+    font-family: 'Computerfont', sans-serif;
+    font-size: 100px;
+    color: #DB021F;
+    font-weight: 5;
+    background: #FFE96E;
+    border: 8px solid #DB021F;
+    /* padding: 10px 30px; */
+    cursor: pointer;
+    border-radius: 51px;
+    margin-top: 50vh;
+    height: 140px;
+    width: 448px;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 120vh;
+    top: 50%; /* Adjust to center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-size: cover; /* Ensures the whole image is visible */
+    background-position: center;
+    /* background-color: #FFE96E; */
+    position: absolute;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 30px;
+}
+
+.icons img {
+    width: 96px;
+    height: 96px;
+}
+
+.coming-soon {
+    font-size: 100px;
+    font-weight: 5;
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    /* height: 150px; */
+    height: 15vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
