@@ -25,6 +25,7 @@ body {
 .background {
     width: 100%;
     height: 140vh;
+    /* min-height: 100vh; */
     background: url('assets/images/background_image.webp') no-repeat center center;
     display: flex;
     flex-direction: column;
@@ -35,6 +36,9 @@ body {
     background-color: #FFE96E;
     position: relative;
     padding: 20px;
+    clip-path: inset(0px 0px 120px 0px);
+    object-fit: cover;
+    object-position: top;
 }
 
 .sign-up {
@@ -47,7 +51,7 @@ body {
     /* padding: 10px 30px; */
     cursor: pointer;
     border-radius: 51px;
-    margin-top: 50vh;
+    margin-top: 55vh;
     height: 140px;
     width: 448px;
     align-items: center;
@@ -89,13 +93,18 @@ body {
     width: 100%;
     text-align: center;
     /* height: 150px; */
-    height: 15vh;
+    /* height: 15vh; */
     align-items: center;
     justify-content: center;
     display: flex;
     overflow: hidden;
     white-space: nowrap;
     position: relative;
+    position: absolute;
+    bottom: -40%;
+    top: 120%;
+    left: 0;
+    width: 100%;
 }
 
 .scrolling-text {
