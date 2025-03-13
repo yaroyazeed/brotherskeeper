@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Computerfont';
+    src: url('assets/fonts/Computerfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    font-family: 'Computerfont', sans-serif;
+    flex-direction: column;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* Background Section */
+.background {
+    width: 100%;
+    height: 85vh; /* Keeps background section height */
+    background: url('assets/images/background_image.webp') no-repeat center center;
+    background-size: cover; /* Stretches the image to fill the entire section */
+    background-position: center;
+    background-color: #FFE96E;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+
+
+/* Sign Up Button */
+.sign-up {
+    font-family: 'Computerfont', sans-serif;
+    font-size: 100px; /* Adjusted for responsiveness */
+    color: #DB021F;
+    font-weight: bold;
+    background: #FFE96E;
+    border: 8px solid #DB021F;
+    cursor: pointer;
+    border-radius: 51px;
+    margin-top: 5vh;
+    height: 130px; /* Adjusted height */
+    width: 448px; /* Adjusted width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay Section */
+.overlay {
+    width: 100%;
+    height: 85vh; /* Matches background */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+}
+
+/* Social Media Icons */
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.icons img {
+    width: 64px; /* Reduced size for mobile */
+    height: 64px;
+}
+
+/* Coming Soon Banner */
+.coming-soon {
+    font-size: 2.5rem; /* Responsive font size */
+    font-weight: bold;
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+/* Scrolling Text */
+.scrolling-text {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scrollText {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* ---- Mobile Styles ---- */
+@media screen and (max-width: 768px) {
+    .background {
+        height: 80vh; /* Reduce height slightly for tablets */
+        background-size: cover;
+    }
+
+    .sign-up {
+        font-size: 1.5rem;
+        height: 80px;
+        width: 260px;
+    }
+
+    .icons img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .coming-soon {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .background {
+        padding: 10px;
+        height: 75vh; /* Reduce height further for small screens */
+    }
+
+    .sign-up {
+        font-size: 1.2rem;
+        height: 60px;
+        width: 200px;
+    }
+
+    .icons {
+        gap: 30px;
+    }
+
+    .icons img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .coming-soon {
+        font-size: 1.5rem;
+    }
+}
